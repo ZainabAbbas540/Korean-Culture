@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Korea: From Independence to Innovation</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nanum+Myeongjo:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="#FDEEF8" />
+          <path d="M12 30c6-2 12-6 24-10" stroke="#E76FA6" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        </svg>
+        <span class="brand-text">Korea: Journey & Design</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="main-nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="#history">History</a></li>
+          <li><a href="#hangul">Hangul</a></li>
+          <li><a href="#culture">Culture</a></li>
+          <li><a href="#tech">Technology</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Korea: From Independence to Innovation</h1>
+          <p class="lead">A visual and interactive journey — history, the beauty of Hangul, cultural traditions, and
+            modern tech — crafted with frontend design in mind.</p>
+          <p class="cta-row">
+            <a class="btn primary" href="#history">Start the journey</a>
+            <a class="btn ghost" href="#quiz">Try the quiz</a>
+          </p>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <!-- decorative card stack -->
+          <div class="card-stack">
+            <div class="card card-a">Han River<br><small>Economic growth</small></div>
+            <div class="card card-b">Hangul<br><small>King Sejong</small></div>
+            <div class="card card-c">K-Tech<br><small>AI · Robotics</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="section section-alt">
+      <div class="container">
+        <h2>From Independence to Modern Korea</h2>
+        <p class="muted">A timeline of resilience, innovation, and cultural pride that shaped the Republic of Korea.</p>
+
+        <ol class="timeline" aria-label="Timeline">
+          <li>
+            <strong>1945</strong>
+            <p>Following Japan’s defeat in World War II, Korea regained independence after 35 years of colonial rule,
+              marking the rebirth of national identity and sovereignty.</p>
+          </li>
+          <li>
+            <strong>1950–1953</strong>
+            <p>The Korean War left the country in ruins and divided it along the 38th parallel into North and South
+              Korea. Despite the destruction, South Korea rebuilt its economy and society through international support
+              and strong determination.</p>
+          </li>
+          <li>
+            <strong>1960s–1990s</strong>
+            <p>The “Miracle on the Han River” - rapid industrialization, education reforms, and export-driven policies
+              transformed South Korea into an economic powerhouse.</p>
+          </li>
+          <li>
+            <strong>2000s–Today</strong>
+            <p>South Korea has emerged as a global cultural leader (K-pop, cinema, cuisine) and an innovation hub known
+              for AI, robotics, and digital transformation.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- Hangul -->
+    <section id="hangul" class="section">
+      <div class="container">
+        <h2>Hangul — The Korean Writing System</h2>
+        <p class="muted">Created under King Sejong the Great in the 15th century to help common people learn to read and
+          write. Hangul reflects scientific design — each letter represents how the mouth moves when pronouncing it.</p>
+
+
+
+        <div class="hangul-grid">
+          <div class="hangul-card">
+            <h3>Why Hangul?</h3>
+            <p>Hangul is phonetic and logical. It was designed to increase literacy among all people by being simple and
+              systematic.</p>
+          </div>
+
+          <div class="hangul-card hangul-sample" aria-live="polite">
+            <h3>Common Daily Expressions</h3>
+            <ul class="expressions">
+              <li><strong>안녕하세요</strong> <span class="rom">Annyeonghaseyo</span> — Hello</li>
+              <li><strong>감사합니다</strong> <span class="rom">Gamsahamnida</span> — Thank you</li>
+              <li><strong>사랑해요</strong> <span class="rom">Saranghaeyo</span> — I love you</li>
+              <li><strong>미안해요</strong> <span class="rom">Mianhaeyo</span> — I'm sorry</li>
+              <li><strong>잘 자요</strong> <span class="rom">Jal jayo</span> — Good night</li>
+            </ul>
+          </div>
+          <p class="muted">Hangul Day (한글날) is celebrated on October 9th in South Korea to honor its creation and its
+            role in literacy and national identity.</p>
+
+        </div>
+
+        <!-- Hangul letter cards -->
+        <div class="hangul-cards" aria-label="Hangul letters with pronunciation">
+          <h3 class="cards-heading">Consonants (자음)</h3>
+          <div class="cards-grid">
+            <!-- row 1 -->
+            <div class="hangul-card-letter">
+              <div class="letter">ㄱ</div>
+              <div class="pron">g / k</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㄴ</div>
+              <div class="pron">n</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㄷ</div>
+              <div class="pron">d / t</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㄹ</div>
+              <div class="pron">r / l</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅁ</div>
+              <div class="pron">m</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅂ</div>
+              <div class="pron">b / p</div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="hangul-card-letter">
+              <div class="letter">ㅅ</div>
+              <div class="pron">s</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅇ</div>
+              <div class="pron">silent / ng</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅈ</div>
+              <div class="pron">j</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅊ</div>
+              <div class="pron">ch</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅋ</div>
+              <div class="pron">k</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅌ</div>
+              <div class="pron">t</div>
+            </div>
+
+            <!-- row 3 -->
+            <div class="hangul-card-letter">
+              <div class="letter">ㅍ</div>
+              <div class="pron">p</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅎ</div>
+              <div class="pron">h</div>
+            </div>
+          </div>
+
+          <h3 class="cards-heading" style="margin-top:18px">Vowels (모음)</h3>
+          <div class="cards-grid">
+            <div class="hangul-card-letter">
+              <div class="letter">ㅏ</div>
+              <div class="pron">a</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅑ</div>
+              <div class="pron">ya</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅓ</div>
+              <div class="pron">eo</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅕ</div>
+              <div class="pron">yeo</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅗ</div>
+              <div class="pron">o</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅛ</div>
+              <div class="pron">yo</div>
+            </div>
+
+            <div class="hangul-card-letter">
+              <div class="letter">ㅜ</div>
+              <div class="pron">u</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅠ</div>
+              <div class="pron">yu</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅡ</div>
+              <div class="pron">eu</div>
+            </div>
+            <div class="hangul-card-letter">
+              <div class="letter">ㅣ</div>
+              <div class="pron">i</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Culture -->
+    <section id="culture" class="section section-alt">
+      <div class="container">
+        <h2>Traditions & Culture</h2>
+        <p class="muted">From hanbok to holidays, click the cards to learn more.</p>
+
+        <div class="cards">
+          <!-- Card 1: Hanbok -->
+          <article class="feature-card" tabindex="0" aria-label="Hanbok, click to flip for more information">
+            <div class="card-inner">
+              <div class="card-front">
+                <div>
+                  <h3>Hanbok</h3>
+                  <p>The traditional dress, graceful lines and gentle colors.</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>한복</h3>
+                  <p>Worn on special occasions like festivals, weddings, and holidays to celebrate Korean heritage.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Holidays -->
+          <article class="feature-card" tabindex="0" aria-label="Holidays, click to flip for more information">
+            <div class="card-inner">
+              <div class="card-front">
+                <div>
+                  <h3>Holidays</h3>
+                  <p>Seolnar (Lunar New Year) and Chuseok (Harvest Festival) are most important.</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>주요 명절</h3>
+                  <p>Families gather, share food like songpyeon (rice cakes), and honor ancestors.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Festivals -->
+          <article class="feature-card" tabindex="0" aria-label="Festivals, click to flip for more information">
+            <div class="card-inner">
+              <div class="card-front">
+                <div>
+                  <h3>Festivals</h3>
+                  <p>From lantern festivals to seasonal flower festivals, Korea has many vibrant events.</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>축제</h3>
+                  <p>Events like the Boryeong Mud Festival and Jinju Lantern Festival attract visitors worldwide.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Etiquette -->
+          <article class="feature-card" tabindex="0" aria-label="Etiquette, click to flip for more information">
+            <div class="card-inner">
+              <div class="card-front">
+                <div>
+                  <h3>Etiquette</h3>
+                  <p>Respect for elders, bowing, and polite speech are key in daily interactions.</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div>
+                  <h3>예절</h3>
+                  <p>Using two hands when giving or receiving items is a common sign of respect.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech" class="section">
+      <div class="container">
+        <h2>Technology & Innovation</h2>
+        <p class="muted">From semiconductors to smart cities, Korea blends creativity and technology to shape the
+          future.</p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h4>Global Giants</h4>
+            <p>Samsung, LG, Hyundai, and SK Group drive advancements in electronics, mobility, energy, and
+              telecommunications, powering global industries.</p>
+          </div>
+
+          <div class="tech-card">
+            <h4>Digital Ecosystem</h4>
+            <p>Naver, Kakao, and Coupang define the modern digital lifestyle, offering platforms for communication,
+              e-commerce, and innovation.</p>
+          </div>
+
+          <div class="tech-card">
+            <h4>AI, Robotics & Biotech</h4>
+            <p>South Korea leads in artificial intelligence research, smart robotics, autonomous vehicles, and
+              cutting-edge biomedical technology, with innovation hubs like Pangyo Tech Valley driving its tech
+              ecosystem.</p>
+
+
+          </div>
+
+          <div class="tech-card">
+            <h4>Gaming & E-Sports</h4>
+            <p>Home to world-class developers and professional gaming leagues, Korea is a pioneer in competitive gaming
+              culture and digital entertainment.</p>
+          </div>
+
+          <div class="tech-card">
+            <h4>Sustainability & Smart Cities</h4>
+            <p>Projects like Songdo Smart City integrate green design, IoT, and data-driven systems for sustainable
+              urban living.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Quiz -->
+    <section id="quiz" class="section section-alt">
+      <div class="container">
+        <h2>Test Your Korean Expressions</h2>
+        <p class="muted">Try the quiz — the phrases are very basic, test what you learned from kdramas:</p>
+
+        <div id="quiz-wrap" class="quiz-wrap" aria-live="polite">
+          <div id="quiz-card" class="quiz-card" role="region" aria-labelledby="quiz-title">
+            <h3 id="quiz-title">Quiz: Match the meaning</h3>
+            <div id="question-area" class="question-area"></div>
+
+            <div class="quiz-actions">
+              <button id="prev-btn" class="btn ghost" disabled>Previous</button>
+              <button id="next-btn" class="btn primary">Next</button>
+            </div>
+            <div id="progress" class="progress" aria-hidden="true"></div>
+          </div>
+
+          <div id="result-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal-card">
+              <h3 id="result-title">Your score</h3>
+              <p id="result-text"></p>
+              <div class="modal-actions">
+                <button id="retry-btn" class="btn ghost">Retake Quiz</button>
+                <button id="close-btn" class="btn primary">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with ❤️ by Zainab Abbas • © <span id="year"></span></p>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

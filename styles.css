@@ -1,0 +1,631 @@
+:root {
+
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --muted: #6e727a;
+  --text: #1c1f24;
+  --accent: #2456a6;
+  --accent-2: #5b8de0;
+  --accent-warm: #e3b04b;
+  --soft-gray: #e2e6ea;
+  --overlay: rgba(255, 255, 255, 0.6);
+  --radius: 16px;
+  --container: 1100px;
+  --shadow: 0 8px 25px rgba(36, 86, 166, 0.08);
+}
+
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Nanum Myeongjo", serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), #fff);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 6px 10px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(90deg, rgba(253, 238, 248, 0.95), rgba(255, 250, 255, 0.95));
+  border-bottom: 1px solid rgba(231, 111, 166, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(6px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 6px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-text {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px
+}
+
+/* Nav */
+.main-nav {
+  position: relative
+}
+
+.nav-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background: var(--card);
+  transform: translateY(-2px)
+}
+
+/* Hero */
+.hero {
+  padding: 48px 0 60px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: clamp(26px, 3.6vw, 40px);
+  margin-bottom: 10px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 18px
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), #ff8fc0);
+  color: white;
+  box-shadow: 0 8px 30px rgba(231, 111, 166, 0.18);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(231, 111, 166, 0.16);
+}
+
+/* Hero right card stack */
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end
+}
+
+.card {
+  width: 260px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--card), #fff);
+  box-shadow: var(--shadow);
+  text-align: right;
+  font-weight: 600
+}
+
+.card-a {
+  transform: translateY(6px);
+  border-left: 6px solid #fce7f4
+}
+
+.card-b {
+  transform: translateY(-6px);
+  border-left: 6px solid #fcd6e8
+}
+
+.card-c {
+  transform: translateY(-14px);
+  border-left: 6px solid #f9c9e1
+}
+
+/* Sections */
+.section {
+  padding: 48px 0
+}
+
+.section-alt {
+  background: linear-gradient(180deg, #fff, #fffafa)
+}
+
+h2 {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 22px;
+  margin-bottom: 6px
+}
+
+.muted {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 0.95rem
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px
+}
+
+.timeline li {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow)
+}
+
+.timeline strong {
+  display: inline-block;
+  min-width: 64px;
+  color: var(--accent);
+  font-weight: 700
+}
+
+/* Hangul grid */
+.hangul-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px
+}
+
+.hangul-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow)
+}
+
+.hangul-sample .expressions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hangul-sample li {
+  padding: 8px 6px;
+  border-radius: 8px;
+  transition: transform .18s;
+  background: linear-gradient(180deg, #fff, #fff7fd);
+  margin-bottom: 8px
+}
+
+.hangul-sample li:hover {
+  transform: translateY(-4px)
+}
+
+.rom {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 500
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px
+}
+
+
+/* Tech grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px
+}
+
+.tech-card {
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fff, #f8fbff);
+  box-shadow: var(--shadow)
+}
+
+/* Hangul letter cards  */
+.hangul-cards {
+  margin-top: 18px
+}
+
+.cards-heading {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 700
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+  gap: 12px;
+}
+
+.hangul-card-letter {
+  background: linear-gradient(180deg, #fff, #fff7fb);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 12px;
+  text-align: center;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .16s ease, box-shadow .16s;
+}
+
+.hangul-card-letter:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(41, 28, 34, 0.08);
+}
+
+.hangul-card-letter .letter {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hangul-card-letter .pron {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+
+/* The container for the 3D effect */
+.feature-card {
+  background-color: transparent;
+  width: 100%;
+  min-height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.feature-card:hover,
+.feature-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(231, 111, 166, 0.12);
+}
+
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: var(--radius);
+}
+
+/*  JS class to trigger the flip  on click */
+.feature-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Styling for the front and back */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(231, 111, 166, 0.08);
+}
+
+
+.card-front {
+  background: var(--card);
+  color: var(--text);
+}
+
+.card-front h3 {
+  font-family: "Nanum Myeongjo", serif;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+
+.card-back {
+  background: linear-gradient(135deg, #E76FA6, var(--accent));
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-back h3 {
+  font-family: "Nanum Myeongjo", serif;
+  margin-bottom: 8px;
+}
+
+
+/* Quiz  */
+.quiz-wrap {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 18px
+}
+
+.quiz-card {
+  width: 100%;
+  background: linear-gradient(180deg, #fff, #fff7fb);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow)
+}
+
+.question-area {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px
+}
+
+.choice {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left
+}
+
+.choice[aria-checked="true"] {
+  outline: 2px solid rgba(231, 111, 166, 0.22);
+  transform: translateY(-2px)
+}
+
+.choice:hover {
+  transform: translateY(-2px)
+}
+
+
+.quiz-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: flex-end
+}
+
+.progress {
+  height: 8px;
+  background: linear-gradient(90deg, #ffeff7, #f5ffff);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px
+}
+
+.progress .bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  transition: width .45s ease
+}
+
+/* Model */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 14, 18, 0.28);
+  padding: 24px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .18s
+}
+
+.modal[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(41, 28, 34, 0.18);
+  text-align: center
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(180deg, #fff, #fff8fb);
+  border-top: 1px solid rgba(231, 111, 166, 0.06);
+  padding: 18px 0;
+  margin-top: 30px;
+  text-align: center
+}
+
+.site-footer p {
+  color: var(--muted)
+}
+
+/* Responsiveness */
+@media (max-width:900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center
+  }
+
+  .hero-right {
+    order: -1
+  }
+
+  .hangul-grid {
+    grid-template-columns: 1fr
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    right: 14px;
+    top: 54px;
+    background: var(--card);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: var(--shadow)
+  }
+
+  .nav-toggle {
+    display: inline-block
+  }
+
+  .card-stack {
+    align-items: center
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+}
+
+/* Small touch ups */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(231, 111, 166, 0.14);
+  outline-offset: 4px;
+  border-radius: 6px
+}
